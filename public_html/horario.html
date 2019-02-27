@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Horario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="horario.css"/>
+        <script src="horario.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <label>Asignatura</label>
+        <select id="asignaturas">
+            <option>DESP</option>
+            <option>DINT</option>
+            <option>DSERV</option>
+            <option>DCLI</option>
+            <option>EIE</option>
+        </select>
+        <label>Dia</label>
+        <select id="dias">
+            <option>Lunes</option>
+            <option>Martes</option>
+            <option>Miércoles</option>
+            <option>Jueves</option>
+            <option>Viernes</option>
+        </select>
+        <label>Hora</label>
+        <select id="horas">
+            <option>1º Hora</option>
+            <option>2º Hora</option>
+            <option>3º Hora</option>
+            <option>4º Hora</option>
+            <option>5º Hora</option>
+            <option>6º Hora</option>
+        </select>
+        <label>Grupo</label>
+        <select id="grupos">
+            <option>1ºGM</option>
+            <option>2ºGM</option>
+            <option>1ºGS</option>
+            <option>2ºGS</option>
+        </select>
+        <button id="añadir">Añadir</button>
+
+        <table class="tabla_principal">
+            <tr>
+                <th>Tramo horario</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <td>1º hora (Computa: 1h.)</td>
+                <td></td>
+                <td>1GS/IAW (2ºFPIGS) 2GS/IAW</td>
+                <td></td>
+                <td>1ºGM/MOMAE</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2º hora (Computa: 1h.)</td>
+                <td></td>
+                <td>1GS/IAW (2ºFPIGS) 2GS/IAW</td>
+                <td></td>
+                <td>1ºGM/MOMAE</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3º hora (Computa: 1h.)</td>
+                <td>1GS/IAW (2ºFPIGS) 2GS/IAW</td>
+                <td>1GM/MOMAE</td>
+                <td>1GS/HLC (2º FPIGS) 2GS/HLC</td>
+                <td>1GM/REDLO</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Recreo (Computa: 30m.)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4º hora (Computa: 1h.)</td>
+                <td>1GS/IAW (2ºFPIGS) 2GS/IAW</td>
+                <td>1GM/REDLO</td>
+                <td>1GS/FH</td>
+                <td>1GS/FH</td>
+                <td>Tutoría con alumnado (Bachillerato/Form ac. Profes.) 2GS</td>
+            </tr>
+            <tr>
+                <td>5º hora (Computa: 1h.)</td>
+                <td>1GS/FH</td>
+                <td>1GM/REDLO</td>
+                <td>1GM/REDLO</td>
+                <td>Tutoria para tareas administrativas 2GS</td>
+                <td>1GM/REDLO</td>
+            </tr>
+            <tr>
+                <td>6º hora (Computa: 1h.)</td>
+                <td>1GM/REDLO</td>
+                <td>Servicio de guardia</td>
+                <td>1GM/REDLO</td>
+                <td>1GS/HLC (2ºFPIGS) 2GS/HLC</td>
+                <td>2GS/HLC 1GS/HLC (2ºFPIGS)</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Copiar la celda:
+                    <select id="select_a_copiar">
+                        <option>Elija un opción:</option>
+                        <option>Lunes 1º Hora</option>
+                        <option>Lunes 2º Hora</option>
+                        <option>Lunes 3º Hora</option>
+                        <option>Lunes 4º Hora</option>
+                        <option>Lunes 5º Hora</option>
+                        <option>Lunes 6º Hora</option>
+                        <option>Martes 1º Hora</option>
+                        <option>Martes 2º Hora</option>
+                        <option>Martes 3º Hora</option>
+                        <option>Martes 4º Hora</option>
+                        <option>Martes 5º Hora</option>
+                        <option>Martes 6º Hora</option>
+                        <option>Miércoles 1º Hora</option>
+                        <option>Miércoles 2º Hora</option>
+                        <option>Miércoles 3º Hora</option>
+                        <option>Miércoles 4º Hora</option>
+                        <option>Miércoles 5º Hora</option>
+                        <option>Miércoles 6º Hora</option>
+                        <option>Jueves 1º Hora</option>
+                        <option>Jueves 2º Hora</option>
+                        <option>Jueves 3º Hora</option>
+                        <option>Jueves 4º Hora</option>
+                        <option>Jueves 5º Hora</option>
+                        <option>Jueves 6º Hora</option>
+                        <option>Viernes 1º Hora</option>
+                        <option>Viernes 2º Hora</option>
+                        <option>Viernes 3º Hora</option>
+                        <option>Viernes 4º Hora</option>
+                        <option>Viernes 5º Hora</option>
+                        <option>Viernes 6º Hora</option>
+                    </select>
+                </td>
+                <td>
+                    En la celda:
+                    <select id="select_copiada">
+                        <option>Elija una opción:</option>
+                        <option>Lunes 1º Hora</option>
+                        <option>Lunes 2º Hora</option>
+                        <option>Lunes 3º Hora</option>
+                        <option>Lunes 4º Hora</option>
+                        <option>Lunes 5º Hora</option>
+                        <option>Lunes 6º Hora</option>
+                        <option>Martes 1º Hora</option>
+                        <option>Martes 2º Hora</option>
+                        <option>Martes 3º Hora</option>
+                        <option>Martes 4º Hora</option>
+                        <option>Martes 5º Hora</option>
+                        <option>Martes 6º Hora</option>
+                        <option>Miércoles 1º Hora</option>
+                        <option>Miércoles 2º Hora</option>
+                        <option>Miércoles 3º Hora</option>
+                        <option>Miércoles 4º Hora</option>
+                        <option>Miércoles 5º Hora</option>
+                        <option>Miércoles 6º Hora</option>
+                        <option>Jueves 1º Hora</option>
+                        <option>Jueves 2º Hora</option>
+                        <option>Jueves 3º Hora</option>
+                        <option>Jueves 4º Hora</option>
+                        <option>Jueves 5º Hora</option>
+                        <option>Jueves 6º Hora</option>
+                        <option>Viernes 1º Hora</option>
+                        <option>Viernes 2º Hora</option>
+                        <option>Viernes 3º Hora</option>
+                        <option>Viernes 4º Hora</option>
+                        <option>Viernes 5º Hora</option>
+                        <option>Viernes 6º Hora</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mover la celda:
+                    <select id="select_a_mover">
+                        <option>Elija una opción:</option>
+                        <option>Lunes 1º Hora</option>
+                        <option>Lunes 2º Hora</option>
+                        <option>Lunes 3º Hora</option>
+                        <option>Lunes 4º Hora</option>
+                        <option>Lunes 5º Hora</option>
+                        <option>Lunes 6º Hora</option>
+                        <option>Martes 1º Hora</option>
+                        <option>Martes 2º Hora</option>
+                        <option>Martes 3º Hora</option>
+                        <option>Martes 4º Hora</option>
+                        <option>Martes 5º Hora</option>
+                        <option>Martes 6º Hora</option>
+                        <option>Miércoles 1º Hora</option>
+                        <option>Miércoles 2º Hora</option>
+                        <option>Miércoles 3º Hora</option>
+                        <option>Miércoles 4º Hora</option>
+                        <option>Miércoles 5º Hora</option>
+                        <option>Miércoles 6º Hora</option>
+                        <option>Jueves 1º Hora</option>
+                        <option>Jueves 2º Hora</option>
+                        <option>Jueves 3º Hora</option>
+                        <option>Jueves 4º Hora</option>
+                        <option>Jueves 5º Hora</option>
+                        <option>Jueves 6º Hora</option>
+                        <option>Viernes 1º Hora</option>
+                        <option>Viernes 2º Hora</option>
+                        <option>Viernes 3º Hora</option>
+                        <option>Viernes 4º Hora</option>
+                        <option>Viernes 5º Hora</option>
+                        <option>Viernes 6º Hora</option>
+                    </select>
+                </td>
+                <td>
+                    A la celda:
+                    <select id="select_movida">
+                        <option>Elija una opción:</option>
+                        <option>Lunes 1º Hora</option>
+                        <option>Lunes 2º Hora</option>
+                        <option>Lunes 3º Hora</option>
+                        <option>Lunes 4º Hora</option>
+                        <option>Lunes 5º Hora</option>
+                        <option>Lunes 6º Hora</option>
+                        <option>Martes 1º Hora</option>
+                        <option>Martes 2º Hora</option>
+                        <option>Martes 3º Hora</option>
+                        <option>Martes 4º Hora</option>
+                        <option>Martes 5º Hora</option>
+                        <option>Martes 6º Hora</option>
+                        <option>Miércoles 1º Hora</option>
+                        <option>Miércoles 2º Hora</option>
+                        <option>Miércoles 3º Hora</option>
+                        <option>Miércoles 4º Hora</option>
+                        <option>Miércoles 5º Hora</option>
+                        <option>Miércoles 6º Hora</option>
+                        <option>Jueves 1º Hora</option>
+                        <option>Jueves 2º Hora</option>
+                        <option>Jueves 3º Hora</option>
+                        <option>Jueves 4º Hora</option>
+                        <option>Jueves 5º Hora</option>
+                        <option>Jueves 6º Hora</option>
+                        <option>Viernes 1º Hora</option>
+                        <option>Viernes 2º Hora</option>
+                        <option>Viernes 3º Hora</option>
+                        <option>Viernes 4º Hora</option>
+                        <option>Viernes 5º Hora</option>
+                        <option>Viernes 6º Hora</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

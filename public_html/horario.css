@@ -1,0 +1,31 @@
+
+table{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.tabla_principal{
+    width: 900px;
+    height: 600px;
+    margin: 20px auto;
+}
+.tabla_principal td{
+    width: 130px;
+}
+table tr td{
+    border: 1px solid white;
+}
+tr:first-child{
+    color: white;
+    text-align: center;
+    background-color: grey;
+}
+
+tr:nth-child(even){
+    background-color: lightgrey;
+}
+tr td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
